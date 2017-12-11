@@ -12,10 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    let defaults = UserDefaults.standard
+    let nameKey = "nameKey"
+    let birthdayKey = "birthdayKey"
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //if user has already entered name AND birthday
+        if defaults.value(forKey: nameKey) as? String != nil && defaults.value(forKey: birthdayKey) as? String != nil {
+            
+           
+           
+        } else {
+            let introViewController = IntroViewController()
+            self.window?.rootViewController?.present(introViewController, animated: true, completion: nil)
+        }
+        
         return true
     }
 
