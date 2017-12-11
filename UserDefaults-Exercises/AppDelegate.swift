@@ -19,14 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //if user has already entered name AND birthday
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
         if defaults.value(forKey: nameKey) as? String != nil && defaults.value(forKey: birthdayKey) as? String != nil {
             
-           
-           
+            let userEstablishedNavigationalController = storyboard.instantiateViewController(withIdentifier: "UserEstablishedNavigationController") as! UINavigationController
+            
+           self.window?.rootViewController = userEstablishedNavigationalController
+            
         } else {
-            let introViewController = IntroViewController()
-            self.window?.rootViewController?.present(introViewController, animated: true, completion: nil)
+            let introNavigationViewController = storyboard.instantiateViewController(withIdentifier: "IntroNavigationViewController") as! UINavigationController
+            
+            self.window?.rootViewController = introNavigationViewController
+            
         }
+        
+        self.window?.makeKeyAndVisible()
         
         return true
     }

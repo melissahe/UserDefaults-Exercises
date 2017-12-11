@@ -13,6 +13,9 @@
 		810DF26C1FDF1AA400C0EA78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810DF26A1FDF1AA400C0EA78 /* LaunchScreen.storyboard */; };
 		810DF2741FDF1FDC00C0EA78 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DF2731FDF1FDC00C0EA78 /* IntroViewController.swift */; };
 		810DF2771FDF207D00C0EA78 /* UserEstablishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DF2761FDF207D00C0EA78 /* UserEstablishedViewController.swift */; };
+		810DF27B1FDF2BB800C0EA78 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DF27A1FDF2BB800C0EA78 /* SettingsTableViewController.swift */; };
+		81D38A6F1FDF34A400AFBCC3 /* IntroNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D38A6E1FDF34A400AFBCC3 /* IntroNavigationViewController.swift */; };
+		81D38A711FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D38A701FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		810DF26D1FDF1AA400C0EA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		810DF2731FDF1FDC00C0EA78 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		810DF2761FDF207D00C0EA78 /* UserEstablishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEstablishedViewController.swift; sourceTree = "<group>"; };
+		810DF27A1FDF2BB800C0EA78 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		81D38A6E1FDF34A400AFBCC3 /* IntroNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroNavigationViewController.swift; sourceTree = "<group>"; };
+		81D38A701FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEstablishedNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +65,8 @@
 				810DF2751FDF201400C0EA78 /* Unused Stuff */,
 				810DF2611FDF1AA400C0EA78 /* AppDelegate.swift */,
 				810DF2651FDF1AA400C0EA78 /* Main.storyboard */,
-				810DF2731FDF1FDC00C0EA78 /* IntroViewController.swift */,
-				810DF2761FDF207D00C0EA78 /* UserEstablishedViewController.swift */,
+				810DF27D1FDF2BEA00C0EA78 /* Models */,
+				810DF27C1FDF2BD200C0EA78 /* View Controllers */,
 				810DF26D1FDF1AA400C0EA78 /* Info.plist */,
 			);
 			path = "UserDefaults-Exercises";
@@ -73,6 +79,25 @@
 				810DF2681FDF1AA400C0EA78 /* Assets.xcassets */,
 			);
 			path = "Unused Stuff";
+			sourceTree = "<group>";
+		};
+		810DF27C1FDF2BD200C0EA78 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81D38A6E1FDF34A400AFBCC3 /* IntroNavigationViewController.swift */,
+				81D38A701FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift */,
+				810DF2731FDF1FDC00C0EA78 /* IntroViewController.swift */,
+				810DF2761FDF207D00C0EA78 /* UserEstablishedViewController.swift */,
+				810DF27A1FDF2BB800C0EA78 /* SettingsTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		810DF27D1FDF2BEA00C0EA78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810DF27B1FDF2BB800C0EA78 /* SettingsTableViewController.swift in Sources */,
+				81D38A6F1FDF34A400AFBCC3 /* IntroNavigationViewController.swift in Sources */,
 				810DF2621FDF1AA400C0EA78 /* AppDelegate.swift in Sources */,
 				810DF2741FDF1FDC00C0EA78 /* IntroViewController.swift in Sources */,
+				81D38A711FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift in Sources */,
 				810DF2771FDF207D00C0EA78 /* UserEstablishedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

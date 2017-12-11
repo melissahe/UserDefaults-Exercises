@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xWW-jU-0rt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--HoriOScope-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="IntroViewController" customModule="UserDefaults_Exercises" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroViewController" id="BYZ-38-t0r" customClass="IntroViewController" customModule="UserDefaults_Exercises" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
         <!--Settings-->
         <scene sceneID="gUl-cH-B3G">
             <objects>
-                <tableViewController id="0Ni-bD-XWH" sceneMemberID="viewController">
+                <tableViewController id="0Ni-bD-XWH" customClass="SettingsTableViewController" customModule="UserDefaults_Exercises" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="H08-xn-SBa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgP-tc-Lnx">
                                                     <rect key="frame" x="130" y="7" width="116" height="30"/>
                                                     <state key="normal" title="Confirm Settings"/>
+                                                    <connections>
+                                                        <action selector="confirmSettingsButtonPressed:" destination="0Ni-bD-XWH" eventType="touchUpInside" id="vOv-LT-Rb2"/>
+                                                        <segue destination="X3v-Jh-p7p" kind="show" id="Ro8-7k-c8L"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -144,39 +148,43 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="T05-OQ-AwT"/>
+                    <connections>
+                        <outlet property="birthDatePicker" destination="0oL-tk-mMl" id="FLa-va-MhT"/>
+                        <outlet property="nameTextField" destination="jCh-B8-Lh3" id="TaX-IN-TRR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPd-7s-a22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="33"/>
+            <point key="canvasLocation" x="1361" y="33"/>
         </scene>
         <!--HoriOScope-->
         <scene sceneID="Ucc-nf-vLM">
             <objects>
-                <viewController id="X3v-Jh-p7p" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserEstablishedViewController" id="X3v-Jh-p7p" customClass="UserEstablishedViewController" customModule="UserDefaults_Exercises" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aud-me-Bg4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back (user)!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrU-0r-VMc">
-                                <rect key="frame" x="50" y="100" width="275" height="21"/>
+                                <rect key="frame" x="50" y="56" width="275" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your horoscope is: (horoscope)!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5L-aj-hab">
-                                <rect key="frame" x="60" y="160" width="255" height="21"/>
+                                <rect key="frame" x="60" y="116" width="255" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's your horoscope for:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya9-dd-XBS">
-                                <rect key="frame" x="50" y="228" width="275" height="21"/>
+                                <rect key="frame" x="50" y="184" width="275" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ucd-l7-Sjj">
-                                <rect key="frame" x="30" y="296" width="325" height="29"/>
+                                <rect key="frame" x="30" y="252" width="325" height="29"/>
                                 <segments>
                                     <segment title="Yesterday"/>
                                     <segment title="Today"/>
@@ -184,7 +192,7 @@
                                 </segments>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="KKi-sk-iL7">
-                                <rect key="frame" x="50" y="374" width="275" height="243"/>
+                                <rect key="frame" x="50" y="330" width="275" height="287"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -215,19 +223,20 @@
                     <navigationItem key="navigationItem" title="HoriOScope" id="fNa-kr-btp">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-settings-50" id="MUs-6O-yn2">
                             <connections>
-                                <segue destination="0Ni-bD-XWH" kind="show" identifier="settingsSegue" id="zo0-th-TKy"/>
+                                <segue destination="0Ni-bD-XWH" kind="show" identifier="settingsSegue" id="XZ6-7y-SWZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhV-xm-uzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397.60000000000002" y="815.44227886056979"/>
+            <point key="canvasLocation" x="398" y="815"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Intro Navigational Controller-->
         <scene sceneID="9cS-5R-JeR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xWW-jU-0rt" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5nq-Qd-IAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="IntroNavigationViewController" title="Intro Navigational Controller" automaticallyAdjustsScrollViewInsets="NO" id="xWW-jU-0rt" customClass="IntroNavigationViewController" customModule="UserDefaults_Exercises" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YsY-lx-YLO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -238,14 +247,13 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dzc-KV-H7r"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5nq-Qd-IAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-697" y="33"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--User Established Navigational Controller-->
         <scene sceneID="Byz-Sw-7PO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LAs-38-McE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UserEstablishedNavigationController" title="User Established Navigational Controller" automaticallyAdjustsScrollViewInsets="NO" id="LAs-38-McE" customClass="UserEstablishedNavigationViewController" customModule="UserDefaults_Exercises" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ag-a8-WZi">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -265,6 +273,7 @@
         <image name="icons8-settings-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zo0-th-TKy"/>
+        <segue reference="Ro8-7k-c8L"/>
+        <segue reference="XZ6-7y-SWZ"/>
     </inferredMetricsTieBreakers>
 </document>
