@@ -16,6 +16,9 @@
 		810DF27B1FDF2BB800C0EA78 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DF27A1FDF2BB800C0EA78 /* SettingsTableViewController.swift */; };
 		81D38A6F1FDF34A400AFBCC3 /* IntroNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D38A6E1FDF34A400AFBCC3 /* IntroNavigationViewController.swift */; };
 		81D38A711FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D38A701FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift */; };
+		81D38A731FDF692200AFBCC3 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D38A721FDF692200AFBCC3 /* NetworkHelper.swift */; };
+		81D38A751FDF6B8900AFBCC3 /* HoroscopeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D38A741FDF6B8900AFBCC3 /* HoroscopeInfo.swift */; };
+		81D38A771FDF6D1A00AFBCC3 /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D38A761FDF6D1A00AFBCC3 /* HoroscopeAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		810DF27A1FDF2BB800C0EA78 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		81D38A6E1FDF34A400AFBCC3 /* IntroNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroNavigationViewController.swift; sourceTree = "<group>"; };
 		81D38A701FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEstablishedNavigationViewController.swift; sourceTree = "<group>"; };
+		81D38A721FDF692200AFBCC3 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		81D38A741FDF6B8900AFBCC3 /* HoroscopeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeInfo.swift; sourceTree = "<group>"; };
+		81D38A761FDF6D1A00AFBCC3 /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 				810DF2751FDF201400C0EA78 /* Unused Stuff */,
 				810DF2611FDF1AA400C0EA78 /* AppDelegate.swift */,
 				810DF2651FDF1AA400C0EA78 /* Main.storyboard */,
+				81D38A721FDF692200AFBCC3 /* NetworkHelper.swift */,
 				810DF27D1FDF2BEA00C0EA78 /* Models */,
 				810DF27C1FDF2BD200C0EA78 /* View Controllers */,
 				810DF26D1FDF1AA400C0EA78 /* Info.plist */,
@@ -96,6 +103,8 @@
 		810DF27D1FDF2BEA00C0EA78 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				81D38A741FDF6B8900AFBCC3 /* HoroscopeInfo.swift */,
+				81D38A761FDF6D1A00AFBCC3 /* HoroscopeAPIClient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,9 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D38A731FDF692200AFBCC3 /* NetworkHelper.swift in Sources */,
 				810DF27B1FDF2BB800C0EA78 /* SettingsTableViewController.swift in Sources */,
 				81D38A6F1FDF34A400AFBCC3 /* IntroNavigationViewController.swift in Sources */,
 				810DF2621FDF1AA400C0EA78 /* AppDelegate.swift in Sources */,
+				81D38A751FDF6B8900AFBCC3 /* HoroscopeInfo.swift in Sources */,
+				81D38A771FDF6D1A00AFBCC3 /* HoroscopeAPIClient.swift in Sources */,
 				810DF2741FDF1FDC00C0EA78 /* IntroViewController.swift in Sources */,
 				81D38A711FDF34DF00AFBCC3 /* UserEstablishedNavigationViewController.swift in Sources */,
 				810DF2771FDF207D00C0EA78 /* UserEstablishedViewController.swift in Sources */,
